@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:700');
+
+:root {
+  --color-values: #5614B0, #DBD65C;
+  --rotation-value: 90deg;
+}
+
+$font-fam-bam: "Poppins", sans-serif;
+$font-size: 8vw;
+$background: white;
+$freakoutSpeed: 5s;
+$backgroundSize: 400%;
+
+$linearGradientRotation: var(--rotation-value);
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  font-family: $font-fam-bam;
+  background: linear-gradient(var(--rotation-value), var(--color-values));
+  background-size: $backgroundSize $backgroundSize;
+
+  -webkit-animation: FreakOut $freakoutSpeed ease infinite;
+  -moz-animation: FreakOut $freakoutSpeed ease infinite;
+  animation: FreakOut $freakoutSpeed ease infinite;
+}
+
+.perspective {
+  perspective: 1000px;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+}
+
+.effect {
+  animation: 0.25s ease-in 0.5s both Boom;
+  transform-style: preserve-3d;
+  transform-origin: center;
+}
+
+.font {
+  text-align: center;
+  font-size: calc(25px + 10vw);
+  line-height: calc(25px + 10vw * 1.1);
+  color: $background;
+  padding: 0 $font-size / 2 $font-size / 2 $font-size / 2;
+  word-wrap: break-word;
+  text-transform: none;
+  text-shadow: -10px 10px 10px rgba(0,0,0,0.25),
+               -20px 20px 20px rgba(0,0,0,0.05),
+               -30px 30px 30px rgba(0,0,0,0.05);
+}
+
+button {
+  position: absolute;
+  bottom: 5vh;
+  font-size: calc(16px + .5vw);
+  line-height: 1;
+  background-color: white;
+  font-family: $font-fam-bam;
+  border: 0 none;
+  padding: 15px 30px;
+  color: #111;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 5px;
+  opacity: 0.9;
+  outline: 0;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transition: transform .3s ease, background .5s ease;
+  &:active {
+    transform: scale(0.85);
+  }
+}
+
+// Animations
+
+@keyframes FreakOut {
+    0% { background-position: 0% 50% }
+    50% { background-position: 100% 50% }
+    100% { background-position: 0% 50% }
+}
+
+@keyframes Boom {
+  0% {
+    opacity: 0;
+    transform: scale(.85) rotateX(90deg);
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1) rotateX(0deg);
+  }
+}
