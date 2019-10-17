@@ -1,11 +1,11 @@
 {
   "name": "random-front-end-job-title-generator",
   "version": "1.0.0",
-  "description": "Generate a ranom Front End Job Title.",
+  "description": "Generate a random Front End Job Title.",
   "main": "index.js",
   "scripts": {
     "dev": "parcel src/index.html && parcel watch src/index.html",
-    "build": "parcel build ./src/index.html --out-dir ./"
+    "build": "parcel build ./src/index.html --out-dir ./docs"
   },
   "keywords": [],
   "author": "Dan Hernandez<dont@email.me>",
