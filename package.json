@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "parcel src/index.html && parcel watch src/index.html",
-    "build": "parcel build ./src/index.html --out-dir ./docs"
+    "build": "parcel build ./src/index.html --out-dir ./docs --public-url ./"
   },
   "keywords": [],
   "author": "Dan Hernandez<dont@email.me>",
