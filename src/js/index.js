@@ -1,7 +1,6 @@
 const Prefix = [
   '',
   'Associate',
-  'Passionate',
   'Junior',
   'Mid-weight',
   'Senior',
