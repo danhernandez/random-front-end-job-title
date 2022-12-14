@@ -4,7 +4,7 @@
   --color-values: #5614b0, #dbd65c;
   --rotation-value: 90deg;
   --font-fam-bam: "Poppins", sans-serif;
-  --font-size: 8vw;
+  --font-size: 13vw;
   --background: white;
   --freakout-speed: 5s;
   --background-size: 400%;
@@ -33,12 +33,11 @@ body {
 }
 
 .wrapper {
-  display: flex;
-  align-items: center;
+  display: grid;
   justify-content: center;
-  flex-direction: column;
+  align-content: center;
   height: 100vh;
-  width: 100vw;
+  width: 100%;
 }
 
 .effect {
@@ -49,36 +48,52 @@ body {
 
 .font {
   text-align: center;
-  font-size: calc(25px + 10vw);
-  line-height: calc(25px + 10vw * 1.1);
+  font-size: var(--font-size);
+  line-height: 1.1;
   color: var(--background);
-  padding: 0 var(--font-size) / 2 var(--font-size) / 2 var(--font-size) / 2;
+  padding: 5vw;
   word-wrap: break-word;
   text-transform: none;
   text-shadow: -10px 10px 10px rgba(0, 0, 0, 0.25),
     -20px 20px 20px rgba(0, 0, 0, 0.05), -30px 30px 30px rgba(0, 0, 0, 0.05);
 }
 
-button {
+.body {
+  overflow: hidden;
+}
+
+.button {
   position: absolute;
-  bottom: 5vh;
-  font-size: calc(16px + 0.5vw);
+  bottom: 50px;
+  right: 50px;
   line-height: 1;
   background-color: white;
   font-family: var(--font-fam-bam);
   border: 0 none;
-  padding: 15px 30px;
+  padding: 30px;
   color: #111;
-  text-transform: uppercase;
   cursor: pointer;
-  border-radius: 5px;
+  border-radius: 50px;
+  height: 50px;
+  width: 50px;
   opacity: 0.9;
   outline: 0;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease, var(--background) 0.5s ease;
 }
 
-button.active {
+#refreshIcon {
+  fill: black;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform: scale(0.5);
+  transform-origin: center;
+}
+
+.button:active {
   transform: scale(0.85);
 }
 
