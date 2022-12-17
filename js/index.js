@@ -1,6 +1,7 @@
 const Prefix = [
   "",
   "Associate",
+  "Base",
   "Junior",
   "Mid-weight",
   "Senior",
@@ -9,7 +10,6 @@ const Prefix = [
   "Principle",
   "Full-stack",
   "Head",
-  "Head of",
 ];
 
 const Infix = [
@@ -151,7 +151,6 @@ const Suffix = [
   "Associate",
   "Advocate",
   "Technician",
-  "Assistant",
   "Officer",
   "Relations",
   "Evangelist",
