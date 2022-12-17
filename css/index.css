@@ -65,7 +65,7 @@ body {
 
 .button {
   position: absolute;
-  bottom: 10%;
+  bottom: 12%;
   right: 50px;
   line-height: 1;
   background-color: white;
@@ -83,7 +83,15 @@ body {
   transition: transform 0.3s ease, var(--background) 0.5s ease;
 }
 
+@media screen and (min-width: 391px) {
+  .button {
+    bottom: 5%;
+  }
+}
+
 #refreshIcon {
+  height: 100%;
+  width: 100%;
   fill: black;
   position: absolute;
   top: 0;
